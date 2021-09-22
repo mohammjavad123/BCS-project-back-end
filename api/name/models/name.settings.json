@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "names",
+  "info": {
+    "name": "akhbar",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "veiw": {
+      "type": "integer"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "title": {
+      "type": "string"
+    },
+    "main": {
+      "type": "string"
+    },
+    "images": {
+      "type": "string"
+    }
+  }
+}
